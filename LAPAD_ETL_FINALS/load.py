@@ -53,7 +53,7 @@ def build_big_table():
     # 6. Save to Presentation Database on Render
     try:
         big_table.to_sql("fact_global_sales", p_engine, if_exists="replace", index=False)
-        # REMOVE THE EMOJI ON THE LINE BELOW:
+
         print("[LOAD] Consolidated BIG TABLE successfully saved to Render PostgreSQL!")
     except Exception as e:
         print(f"[ERROR] Failed to save to database: {e}")
